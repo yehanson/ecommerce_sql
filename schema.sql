@@ -20,8 +20,8 @@ CREATE TABLE orders(
     PRIMARY KEY (order_id),
     customer_id INT NOT NULL,
     product_id INT NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
-    FOREIGN KEY (product_id) REFERENCES product(product_id),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id),
     date_ordered DATE,
     shipping_address VARCHAR(255),
     quantity INT
